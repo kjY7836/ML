@@ -1,9 +1,9 @@
-# [深度研读] 1000 Layer Networks for Self-Supervised RL
+# 1000 Layer Networks for Self-Supervised RL
 
 **论文标题：** 1000 Layer Networks for Self-Supervised RL: Scaling Depth Can Enable New Goal-Reaching Capabilities  
-**会议/来源：** NeurIPS 2025 (Submission) / arXiv:2503.14858  
-**代码主页：** [Project Page](https://wang-kevin3290.github.io/scaling-crl/)  
-**一句话总结：** 本文打破了强化学习（RL）只能使用浅层网络的魔咒，通过**自监督对比学习**配合**ResNet架构**，将网络深度扩展至 **1024层**，在无奖励信号的复杂任务中实现了能力的涌现和性能的剧增。
+**会议：** NeurIPS 2025 (Submission)
+**主页：** [Project Page](https://wang-kevin3290.github.io/scaling-crl/)  
+**总结：** 本文打破了强化学习（RL）只能使用浅层网络的魔咒，通过**自监督对比学习**配合**ResNet架构**，将网络深度扩展至 **1024层**，在无奖励信号的复杂任务中实现了能力的涌现和性能的剧增。
 
 ---
 
