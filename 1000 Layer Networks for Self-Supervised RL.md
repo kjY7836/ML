@@ -31,7 +31,7 @@
     *   **公式：**
 
     $$
-    \mathcal{L} = - \mathbb{E} \left[ \log \frac{\exp(f(s_i, a_i, g_i))}{\sum_{j=1}^K \exp(f(s_i, a_i, g_j))} \right]
+    \mathcal{L}=-\mathbb{E}\left[\log\frac{\exp(f(s_i,a_i,g_i))}{\sum_{j=1}^K\exp(f(s_i, a_i, g_j))}\right]
     $$
 
     *   **Critic 定义：** $f(s, a, g) = -\|\phi(s, a) - \psi(g)\|_2$ （在特征空间中衡量当前状态动作对与目标的相似度）。
