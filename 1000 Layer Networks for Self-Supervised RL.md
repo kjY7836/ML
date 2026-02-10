@@ -1,7 +1,7 @@
-# 1000 Layer Networks for Self-Supervised RL
+#1000 Layer Networks for Self-Supervised RL
 
 **论文标题：** 1000 Layer Networks for Self-Supervised RL: Scaling Depth Can Enable New Goal-Reaching Capabilities  
-**会议：** NeurIPS 2025 (Submission)
+**会议：** NeurIPS 2025
 **主页：** [Project Page](https://wang-kevin3290.github.io/scaling-crl/)  
 **总结：** 本文打破了强化学习（RL）只能使用浅层网络的魔咒，通过**自监督对比学习**配合**ResNet架构**，将网络深度扩展至 **1024层**，在无奖励信号的复杂任务中实现了能力的涌现和性能的剧增。
 
@@ -29,8 +29,12 @@
     *   **正样本：** 来自同一轨迹的未来状态（Future States）。
     *   **负样本：** 来自其他轨迹的随机状态。
     *   **公式：**
-        $$ \mathcal{L} = - \mathbb{E} \left[ \log \frac{e^{f(s_i, a_i, g_i)}}{\sum_{j=1}^K e^{f(s_i, a_i, g_j)}} \right] $$
-    *   **Critc 定义：** $f(s, a, g) = -||\phi(s, a) - \psi(g)||_2$（在特征空间中衡量当前状态动作对与目标的相似度）。
+
+    $$
+    \mathcal{L} = - \mathbb{E} \left[ \log \frac{e^{f(s_i, a_i, g_i)}}{\sum_{j=1}^K e^{f(s_i, a_i, g_j)}} \right]
+    $$
+
+    *   **Critic 定义：** $f(s, a, g) = -\|\phi(s, a) - \psi(g)\|_2$ （在特征空间中衡量当前状态动作对与目标的相似度）。
 *   **关键洞察：** **分类损失（Cross-Entropy style）比回归损失（MSE）更适合深层网络训练。** 回归损失在深层网络中容易导致数值不稳定，而分类损失具有更好的梯度流特性。
 
 ### 2.2 架构创新：Residual Blocks + Normalization
